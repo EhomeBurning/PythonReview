@@ -1,0 +1,157 @@
+##Constant 
+print("Hello world")
+
+##Variables 
+x = 1
+x = 100
+print(x)
+#第一个字母必须为字母or下划线
+#只能在字母，下划线，数字
+#区分大小写
+spam = 1
+sPam = 100 #different variables now
+print(spam)
+
+##Statement
+x = 2 #赋值语句:左手边变量储存右手边表达式运算结果
+x = x + 2 #赋值语句
+print(x)
+
+# y = y+2 
+#print(y) name 'y' not defined
+
+##Math Expression:
+#/可以得到小数(float)
+#// 除保留整数
+#** 幂
+#% 余数
+
+xx = 2
+y = 12
+xx = xx + 2 #xx被赋值2
+print(xx)
+
+yy = 440 *12
+print(yy)
+print(yy / 1000) #5.28
+print(yy // 1000) #只取整数 5,并不是四舍五入
+yy = 9
+print(yy // 2) #result = 4, real result = 4.5没有四舍五入
+yy = 99
+print(yy // 100)#result = 0, real result = 0.99
+print(yy / 100) #0.99
+
+##Sequence:
+#() > **幂 > *, /, % > +, -
+print(2 * 2 ** 3)
+print((2 * 2) ** 3)
+
+print(2 * 3.8) #浮点数*整数 = 浮点数（小数，float）
+print(0 * 3.66) #0.0
+
+##Type:
+#integer整数: 1,2,3 whole digits
+#long: 700000000000 数字比较大， 自动可以转换从int到long
+#float浮点数： 1.2 one or more signs after dot
+#string字符串："abc", "apple". 字符串相加，前后串联拼起来. can use '' or ""
+#bool: is_good = True or False
+#None: empty variables without any meaningful values
+
+print(1 + 2) #3
+print("1" + "2") #12
+print("12" + " " + "23") #12 23
+#print("12" + 2) error: integer cannot add with string. Different type cannot process directly.
+print("He'llo") #He'llo
+
+eee = 'hello' + 'there'
+print(type(eee)) #str
+ee = 123
+print(type(ee)) #int
+
+##Change of Type
+print(float(99) / 100) #0.99
+print(float(99)) #99.0
+print(int(99.9)) #99只取整数位，不四舍五入
+
+print(str(99.9) + "123") #99.9123
+#print(float('99.9") + "123") type error: float and str
+#print(float('99.a9") + "123") error: 99.a9
+#print(int('99.9")) error
+
+print(round(99.999,1)) #100.0, 四舍五入，保留一位小数
+
+##input
+name = input('who are you?')#用户输入的东西辅导等号左边的变量
+print('Welcome', name)
+
+#Example:
+height = input('What is your height?')
+weight = input('What is your weight?')
+bmi = float(weight) / float(height) / float(height)
+print(bmi)
+
+##Block语句块：
+#indentation缩进： 增加缩进，语句块开始，减少缩进，语句块结束
+age = 20
+if age < 21:
+  #start
+    print("you can/t drink alcohol")
+    print("But you can drive")
+#end
+print('This is outside of if blocks')
+
+##Conditional Statement:
+#开始-判断条件： true - 执行语句- 结束， false- 结束
+age = 22 #world
+if age < 21:
+  print("Hello")
+else:
+  print("world")
+
+age = None #print world
+if age: #任何不等于0为true
+  print("Hello")
+else:
+  print("world")
+
+##multiple conditional statement:
+a = 1 
+if a == 1: #==代表判断条件：等号左右边是否相等
+  a = a + 1
+elif a == 2:
+  a = a + 2
+elif a == 4:
+  a = a + 3
+else:
+  a = a +4
+#elif 相互互斥，只会执行其中一个条件。
+#if and elif 条件一样，只会执行第一个满足的条件。但一般不重合范围。
+
+a = 1
+if a == 1:
+  a = a + 1 #a = 2
+if a % 2 == 0:
+  a = a + 2 #a = 4
+if a == 4:
+  a = a + 3 #a = 7
+if a == 6: #不满足条件，result = 7
+  a = a + 4
+#每一个都会按顺序执行，不互斥
+
+#Condition: >,<,==,>=,<=,!=
+#Priority: not > and > or
+a = 3
+if not a == 3: # a != 3
+  print ("Hello")
+else: 
+  print("World")
+
+#a and b: 要求a, b 都是true 才对。有一个false 就不行
+a = 3
+b =5
+if a == 3 and b ==4: #False. result: world. 前后都要满足。第一个条件false后面不用判断
+  print ("Hello")
+else: 
+  print("World")
+
+#or: 第一个条件true后面不用判断
